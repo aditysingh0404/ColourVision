@@ -157,3 +157,75 @@ In the future, the project can be improved by:
 ## Conclusion
 
 This project helped in implementing basic Computer Vision concepts such as image preprocessing, color feature extraction, color analysis and histogram visualization. OpenCV was used for image processing, while NumPy and Matplotlib were used for calculations and visualization.
+
+## System Architecture
+
+```mermaid
+flowchart TD
+    A[Input Image] --> B[Image Preprocessing]
+    B --> C[Color Feature Extraction]
+    C --> D[Color Analysis]
+    D --> E[Visualization]
+    E --> F[Output Results]
+```
+
+## Workflow
+
+```mermaid
+flowchart LR
+    A[Load Image] --> B[Resize Image]
+    B --> C[Extract RGB Features]
+    C --> D[Extract HSV Features]
+    D --> E[Find Dominant Color]
+    E --> F[Generate Histogram]
+    F --> G[Save Results]
+```
+
+## Use Case Diagram
+
+```mermaid
+flowchart LR
+    U[User] --> A[Provide Input Image]
+    U --> B[Run Color Analysis]
+    B --> C[View Color Features]
+    B --> D[View Dominant Color]
+    B --> E[View Color Histogram]
+```
+
+## Component Diagram
+
+```mermaid
+flowchart TD
+    A[main.py] --> B[preprocessing.py]
+    A --> C[feature_extraction.py]
+    A --> D[color_analysis.py]
+    A --> E[visualization.py]
+
+    B --> F[Input Image]
+    C --> G[RGB and HSV Features]
+    D --> H[Dominant Color]
+    E --> I[Output Image and Histogram]
+```
+
+## Sequence Diagram
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Main
+    participant Preprocessing
+    participant FeatureExtraction
+    participant Analysis
+    participant Visualization
+
+    User->>Main: Provide input image
+    Main->>Preprocessing: Load and resize image
+    Preprocessing-->>Main: Processed image
+    Main->>FeatureExtraction: Extract color features
+    FeatureExtraction-->>Main: RGB and HSV values
+    Main->>Analysis: Find dominant color
+    Analysis-->>Main: Dominant color
+    Main->>Visualization: Generate output
+    Visualization-->>User: Save results
+```
+
