@@ -36,6 +36,20 @@ The project has the following features:
 * NumPy
 * Matplotlib
 
+## Prerequisites
+
+- Python 3.11 or later
+- Internet connection for installing dependencies
+- Terminal or VS Code
+
+## Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/aditysingh0404/ColourVision.git
+cd ColourVision
+
 ## Project Structure
 
 ```text
@@ -226,6 +240,6 @@ sequenceDiagram
     Main->>Analysis: Find dominant color
     Analysis-->>Main: Dominant color
     Main->>Visualization: Generate output
-    Visualization-->>User: Save results
+    Visualization-->>User: Save resultspython tests/test_features.py
 ```
 
